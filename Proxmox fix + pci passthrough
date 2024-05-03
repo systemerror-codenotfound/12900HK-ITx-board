@@ -1,0 +1,7 @@
+When i installed Proxmox it would crash as soon as i enable IOMMU as per this guide 
+https://www.servethehome.com/how-to-pass-through-pcie-nics-with-proxmox-ve-on-intel-and-amd/
+
+After some testings, i got it stable by placing this:
+intel_iommu=on iommu=pt on  /etc/default/grub
+
+Now it's a lot more stable and i can even run unraid as a VM
